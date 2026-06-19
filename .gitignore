@@ -1,0 +1,14 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+# Logi i dane tymczasowe
+*.log
+*.tmp
+
+# Pliki eksportu (jeśli tworzysz foldery na gotową grę)
+build/
+dist/
+
+# Pliki systemowe
+.DS_Store
+Thumbs.db
