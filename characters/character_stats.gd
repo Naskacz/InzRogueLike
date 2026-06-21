@@ -1,8 +1,9 @@
 extends Resource
 class_name CharacterStats
 
+@export var profession: Enums.Profession
+
 @export_group("Base Stats")
-@export var profession: String = ""
 @export var strength: int = 1
 @export var intellect: int = 1
 @export var agility: int = 1
@@ -11,6 +12,7 @@ class_name CharacterStats
 @export_group("Defensive Stats")
 @export var max_health: int = 100
 @export var armor: int = 0
+@export var resistance: int = 0
 @export var health_regen: int = 0
 
 @export_group("Leveling")
@@ -26,9 +28,10 @@ class_name CharacterStats
 @export var attack_damage: int = 0
 @export var magic_damage: int = 0
 @export var attack_speed: float = 1
-@export var crit_chance: int = 1
-@export var life_steal: int = 0
+@export var crit_chance: float = 0.01
+@export var lifesteal: int = 0
 @export var armor_penetration: int = 0
+@export var resistance_penetration: int = 0
 @export var physical_crit_multiplier: float = 1.25
 @export var magic_crit_multiplier: float = 1.25
 

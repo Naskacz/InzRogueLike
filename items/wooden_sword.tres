@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponStats" load_steps=2 format=3 uid="uid://xnlywjclsnvt"]
+
+[ext_resource type="Script" uid="uid://b6ag5hhjv5i7o" path="res://items/weapon_stats.gd" id="1_4sjkt"]
+
+[resource]
+script = ExtResource("1_4sjkt")
+name = "Wooden Sword"
+profession = 1
+strength = 1
+metadata/_custom_type_script = "uid://b6ag5hhjv5i7o"

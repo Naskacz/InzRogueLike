@@ -1,8 +1,9 @@
-[gd_scene load_steps=18 format=3 uid="uid://375g6jud40da"]
+[gd_scene load_steps=19 format=3 uid="uid://375g6jud40da"]
 
 [ext_resource type="Script" uid="uid://cnn7lrti3vqai" path="res://Player.gd" id="1_glv2v"]
 [ext_resource type="Texture2D" uid="uid://dpdyrwaf4qhc6" path="res://assets/SirAriAssets/Entities/Knight.png" id="2_uu6xs"]
-[ext_resource type="Script" uid="uid://dd3icv2mxvcvq" path="res://stats_manager.gd" id="3_r0du0"]
+[ext_resource type="Script" uid="uid://dd3icv2mxvcvq" path="res://characters/stats_manager.gd" id="3_cm0pq"]
+[ext_resource type="Resource" uid="uid://oskrk7rqw8se" path="res://characters/warrior.tres" id="4_fos0i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r0du0"]
 atlas = ExtResource("2_uu6xs")
@@ -145,4 +146,6 @@ shape = SubResource("RectangleShape2D_uu6xs")
 disabled = true
 
 [node name="StatsManager" type="Node" parent="CharacterBody2D"]
-script = ExtResource("3_r0du0")
+script = ExtResource("3_cm0pq")
+base_data = ExtResource("4_fos0i")
+metadata/_custom_type_script = "uid://dd3icv2mxvcvq"
