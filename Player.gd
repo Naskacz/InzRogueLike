@@ -3,7 +3,7 @@ extends CharacterBody2D
 @onready var stats_manager = $StatsManager
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var dir := Vector2.ZERO
 	dir.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	dir.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
@@ -16,7 +16,7 @@ func _physics_process(delta):
 		_update_animation(dir)
 	else:
 		$AnimatedSprite2D.play("idle")
-		velocity = Vector2.ZERO # Dobra praktyka, żeby postać nie "ślizgała" się)
+		velocity = Vector2.ZERO 
 
 
 func _update_animation(dir: Vector2):
