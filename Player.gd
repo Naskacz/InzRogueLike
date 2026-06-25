@@ -1,7 +1,13 @@
 extends CharacterBody2D
 
 @onready var stats_manager = $StatsManager
-
+@onready var sprite = $AnimatedSprite2D
+func _ready():
+	if GameManager.selected_stats:
+		stats_manager.base_data = GameManager.selected_stats
+	if stats_manager.base_data.character_animations:
+		sprite.sprite_frames = stats_manager.base_data.character_animations
+		sprite.play("idle")
 
 func _physics_process(_delta):
 	var dir := Vector2.ZERO

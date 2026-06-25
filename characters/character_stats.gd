@@ -35,6 +35,8 @@ class_name CharacterStats
 @export var physical_crit_multiplier: float = 1.25
 @export var magic_crit_multiplier: float = 1.25
 
+@export_group("Visuals")
+@export var character_animations: SpriteFrames
 
 
 # Called when the node enters the scene tree for the first time.

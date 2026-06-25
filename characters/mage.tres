@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="CharacterStats" load_steps=2 format=3 uid="uid://cxwoh5b5yhqd3"]
+[gd_resource type="Resource" script_class="CharacterStats" load_steps=3 format=3 uid="uid://cxwoh5b5yhqd3"]
 
 [ext_resource type="Script" uid="uid://fvc0jablaok3" path="res://characters/character_stats.gd" id="1_bj3fm"]
+[ext_resource type="SpriteFrames" uid="uid://b6ckh4g2551il" path="res://characters/mage_animations.tres" id="1_tlaf7"]
 
 [resource]
 script = ExtResource("1_bj3fm")
@@ -11,4 +12,5 @@ health_regen = 1
 intellect_gain = 1
 magic_damage = 1
 attack_speed = 0.9
+character_animations = ExtResource("1_tlaf7")
 metadata/_custom_type_script = "uid://fvc0jablaok3"
