@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=20 format=3 uid="uid://cl4xmji0max26"]
+[gd_resource type="SpriteFrames" load_steps=19 format=3 uid="uid://cl4xmji0max26"]
 
 [ext_resource type="Texture2D" uid="uid://du5mwteis4iyl" path="res://assets/hunter.png" id="1_48btu"]
 
@@ -37,10 +37,6 @@ region = Rect2(48, 32, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_owm4h"]
 atlas = ExtResource("1_48btu")
 region = Rect2(0, 32, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_84ci0"]
-atlas = ExtResource("1_48btu")
-region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ubuwc"]
 atlas = ExtResource("1_48btu")
@@ -119,9 +115,6 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_84ci0")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ubuwc")
 }, {
