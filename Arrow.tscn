@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://d2rvdbjyc2iw4"]
+
+[ext_resource type="Script" uid="uid://cleo2vnmyja5w" path="res://BaseAttack.gd" id="1_265pn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8wdj2"]
+
+[node name="Arrow" type="Area2D" unique_id=1894215910]
+script = ExtResource("1_265pn")
+speed = 800.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1913641804]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D" unique_id=243417172]
+shape = SubResource("RectangleShape2D_8wdj2")

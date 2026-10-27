@@ -37,6 +37,7 @@ class_name CharacterStats
 
 @export_group("Visuals")
 @export var character_animations: SpriteFrames
+@export var attack_scene: PackedScene
 
 
 # Called when the node enters the scene tree for the first time.

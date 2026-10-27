@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://mvy7n07p8s4p"]
+
+[ext_resource type="Script" uid="uid://cleo2vnmyja5w" path="res://BaseAttack.gd" id="1_nejky"]
+[ext_resource type="Texture2D" uid="uid://c6e3bbyfq5fnj" path="res://assets/MeleeSlash.png" id="2_pnig4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r4134"]
+atlas = ExtResource("2_pnig4")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xkjs"]
+atlas = ExtResource("2_pnig4")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w3p21"]
+atlas = ExtResource("2_pnig4")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1h33f"]
+atlas = ExtResource("2_pnig4")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wqt8"]
+atlas = ExtResource("2_pnig4")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4gh3"]
+atlas = ExtResource("2_pnig4")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nejky"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r4134")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xkjs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w3p21")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1h33f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4wqt8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4gh3")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 24.0
+}]
+
+[node name="MeleeSlash" type="Area2D" unique_id=97198550]
+z_index = 5
+scale = Vector2(4, 4)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_nejky")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=609493658]
+position = Vector2(7.25, 0)
+sprite_frames = SubResource("SpriteFrames_nejky")
+frame = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=922675222]
+position = Vector2(1.75, -0.25)
+polygon = PackedVector2Array(-2.5, -8, 4, -8, 8.5, -3.75, 8.5, 4.25, 3, 8, -2.5, 8)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

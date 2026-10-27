@@ -1,41 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://375g6jud40da"]
+[gd_scene format=3 uid="uid://375g6jud40da"]
 
-[ext_resource type="Script" uid="uid://cnn7lrti3vqai" path="res://Player.gd" id="1_glv2v"]
-[ext_resource type="Script" uid="uid://dd3icv2mxvcvq" path="res://characters/stats_manager.gd" id="3_cm0pq"]
-[ext_resource type="Resource" uid="uid://oskrk7rqw8se" path="res://characters/warrior.tres" id="4_fos0i"]
+[ext_resource type="Script" uid="uid://h4ru1snm5aup" path="res://Main.gd" id="1_r0du0"]
+[ext_resource type="PackedScene" uid="uid://diygwv781k3tm" path="res://player.tscn" id="1_uu6xs"]
+[ext_resource type="PackedScene" uid="uid://dyhs6uhqwa3on" path="res://Room.tscn" id="2_cm0pq"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_fpfj3"]
-animations = [{
-"frames": [],
-"loop": true,
-"name": &"new_animation",
-"speed": 5.0
-}]
+[sub_resource type="TileSet" id="TileSet_c2nmx"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_uu6xs"]
+[node name="Main" type="Node2D" unique_id=1938521491]
+script = ExtResource("1_r0du0")
+room_scene = ExtResource("2_cm0pq")
+player_scene = ExtResource("1_uu6xs")
 
-[node name="Main" type="Node2D"]
-
-[node name="Player" type="Node2D" parent="."]
-scale = Vector2(5, 5)
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-script = ExtResource("1_glv2v")
-
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-scale = Vector2(5, 5)
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
-texture_filter = 1
-scale = Vector2(5, 5)
-sprite_frames = SubResource("SpriteFrames_fpfj3")
-animation = &"new_animation"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-shape = SubResource("RectangleShape2D_uu6xs")
-disabled = true
-
-[node name="StatsManager" type="Node" parent="CharacterBody2D"]
-script = ExtResource("3_cm0pq")
-base_data = ExtResource("4_fos0i")
-metadata/_custom_type_script = "uid://dd3icv2mxvcvq"
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1303524626]
+tile_set = SubResource("TileSet_c2nmx")

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cd3mh7afscn4l"]
+
+[ext_resource type="Script" uid="uid://cleo2vnmyja5w" path="res://BaseAttack.gd" id="1_3d6ux"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8wdj2"]
+
+[node name="MagicMeleeSlash" type="Area2D" unique_id=2108453855]
+script = ExtResource("1_3d6ux")
+damage_category = 2
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1873456662]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D" unique_id=1382537173]
+shape = SubResource("RectangleShape2D_8wdj2")

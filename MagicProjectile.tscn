@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bbm7k0lqghbab"]
+
+[ext_resource type="Script" uid="uid://cleo2vnmyja5w" path="res://BaseAttack.gd" id="1_jucil"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8wdj2"]
+
+[node name="MagicProjectile" type="Area2D" unique_id=1162486233]
+script = ExtResource("1_jucil")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=483208160]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D" unique_id=929194832]
+shape = SubResource("CircleShape2D_8wdj2")
