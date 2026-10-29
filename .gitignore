@@ -12,3 +12,6 @@ dist/
 # Pliki systemowe
 .DS_Store
 Thumbs.db
+
+# Addony
+addons
