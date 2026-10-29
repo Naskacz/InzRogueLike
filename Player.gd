@@ -45,11 +45,9 @@ func attack():
 	var scene = stats_manager.base_data.attack_scene
 	var attack_instance = scene.instantiate()
 	
-	# Dane pomocnicze
 	var direction = (get_global_mouse_position() - global_position).normalized()
 	var offset = 40 
 	
-	# Przekazujemy statystyki
 	attack_instance.attacker_stats = self.stats_manager
 
 	if attack_instance.speed <= 0:

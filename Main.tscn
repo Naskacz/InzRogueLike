@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://h4ru1snm5aup" path="res://Main.gd" id="1_r0du0"]
 [ext_resource type="PackedScene" uid="uid://diygwv781k3tm" path="res://player.tscn" id="1_uu6xs"]
-[ext_resource type="PackedScene" uid="uid://dyhs6uhqwa3on" path="res://Room.tscn" id="2_cm0pq"]
+[ext_resource type="PackedScene" uid="uid://dyhs6uhqwa3on" path="res://Starting_room.tscn" id="2_cm0pq"]
 
 [sub_resource type="TileSet" id="TileSet_c2nmx"]
 
@@ -13,3 +13,5 @@ player_scene = ExtResource("1_uu6xs")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1303524626]
 tile_set = SubResource("TileSet_c2nmx")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=373759841]

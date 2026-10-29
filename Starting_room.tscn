@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://dyhs6uhqwa3on"]
+
+[ext_resource type="Script" uid="uid://j8g43ts2i086" path="res://Door.gd" id="2_3unco"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8wdj2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cg8vd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e47ft"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c2nmx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gw2vq"]
+size = Vector2(320, 180)
+
+[node name="Starting_Room" type="Node2D" unique_id=783136944]
+
+[node name="DoorUp" type="Area2D" parent="." unique_id=1793526551]
+z_index = 1
+position = Vector2(310, 10)
+script = ExtResource("2_3unco")
+direction = Vector2i(0, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorUp" unique_id=873171352]
+z_index = 1
+shape = SubResource("RectangleShape2D_8wdj2")
+
+[node name="DoorRight" type="Area2D" parent="." unique_id=899347152]
+z_index = 1
+position = Vector2(630, 170)
+script = ExtResource("2_3unco")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorRight" unique_id=708574405]
+z_index = 1
+shape = SubResource("RectangleShape2D_cg8vd")
+
+[node name="DoorDown" type="Area2D" parent="." unique_id=2145203487]
+z_index = 1
+position = Vector2(310, 350)
+script = ExtResource("2_3unco")
+direction = Vector2i(0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorDown" unique_id=1798542232]
+z_index = 1
+shape = SubResource("RectangleShape2D_e47ft")
+
+[node name="DoorLeft" type="Area2D" parent="." unique_id=364133093]
+z_index = 1
+position = Vector2(10, 170)
+script = ExtResource("2_3unco")
+direction = Vector2i(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorLeft" unique_id=125323891]
+z_index = 1
+shape = SubResource("RectangleShape2D_c2nmx")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1482945050]
+custom_minimum_size = Vector2(640, 360)
+custom_maximum_size = Vector2(640, 360)
+color = Color(0.20553407, 0.12945381, 0.062205493, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="RoomArea" type="Area2D" parent="." unique_id=1668544505]
+collision_layer = 4294967295
+collision_mask = 4294967295
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomArea" unique_id=652076073]
+position = Vector2(320, 180)
+shape = SubResource("RectangleShape2D_gw2vq")
